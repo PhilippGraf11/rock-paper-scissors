@@ -11,8 +11,9 @@
 
 
 var computerChoice = Math.random();
-var userChoice = prompt("Make your choice")
+var userChoice = prompt("Make your choice");
 
+// computerchoice machen
 if (computerChoice < 0.34) {
     computerChoice = "rock";
 } else if(computerChoice <= 0.67) {
@@ -22,4 +23,16 @@ else   {
     computerChoice = "scissors";
 }
 
+// userchoice vs computerchoice
+
+if (computerChoice === userChoice) {
+    console.log("Tie!")
+
+}
+
+if (computerChoice === "rock" && userChoice === "paper") {
+    console.log("Win!")
+} else if (userChoice === "rock" && computerChoice === "paper") {
+    console.log("Lose!")
+}
 
