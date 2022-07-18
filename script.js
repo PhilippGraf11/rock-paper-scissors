@@ -31,8 +31,21 @@ if (computerChoice === userChoice) {
 }
 
 if (computerChoice === "rock" && userChoice === "paper") {
-    console.log("Win!")
+    console.log("You win! Paper beats rock!")
 } else if (userChoice === "rock" && computerChoice === "paper") {
-    console.log("Lose!")
+    console.log("You lose! Paper beats rock!")
 }
 
+if (computerChoice === "scissors" && userChoice === "rock") {
+    console.log("You win! Rock beats scissors!")
+} else if (userChoice === "scissors" && computerChoice === "rock") {
+    console.log("You lose! Rock beats scissors!")
+}
+
+if (computerChoice === "paper" && userChoice === "scissors") {
+    console.log("You win! Scissors beats paper!")
+} else if (userChoice === "paper" && computerChoice === "scissors") {
+    console.log("You lose! Scissors beats paper!")
+}
+
+// 
