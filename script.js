@@ -11,41 +11,55 @@
 
 
 var computerChoice = Math.random();
-var userChoice = prompt("Make your choice");
+var userChoice = prompt("Do you choose rock, paper or scissors?").toLowerCase();
+
+
+
+    
+
+
 
 // computerchoice machen
+function computerPlay() {
 if (computerChoice < 0.34) {
     computerChoice = "rock";
 } else if(computerChoice <= 0.67) {
     computerChoice = "paper";
 }
-else   {
+else   { 
     computerChoice = "scissors";
-}
+} 
 
 // userchoice vs computerchoice
+// 0 = tie, 1 = win, 2 = lose
+
+
 
 if (computerChoice === userChoice) {
-    console.log("Tie!")
 
+    return "tie";
 }
-
+    
 if (computerChoice === "rock" && userChoice === "paper") {
-    console.log("You win! Paper beats rock!")
+    return "win";
 } else if (userChoice === "rock" && computerChoice === "paper") {
-    console.log("You lose! Paper beats rock!")
+    return "lose";
 }
 
 if (computerChoice === "scissors" && userChoice === "rock") {
-    console.log("You win! Rock beats scissors!")
+    return "win";
 } else if (userChoice === "scissors" && computerChoice === "rock") {
-    console.log("You lose! Rock beats scissors!")
+    return "lose";
 }
 
 if (computerChoice === "paper" && userChoice === "scissors") {
-    console.log("You win! Scissors beats paper!")
+    return "win";
 } else if (userChoice === "paper" && computerChoice === "scissors") {
-    console.log("You lose! Scissors beats paper!")
+    return "lose";
 }
+    }
 
-// 
+    
+
+
+ // console.log(computerPlay(userChoice, computerChoice));
