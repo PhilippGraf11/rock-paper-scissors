@@ -42,7 +42,27 @@ function playRound(playerSelection, computerSelection) {
     }
 }
  // get player selection from the user via prompt and store it in a variable case insensitive
-var playerSelection = prompt('Rock, paper, or scissors?').toLowerCase();
+// var playerSelection = prompt('Rock, paper, or scissors?').toLowerCase();
+// create 3 buttons that will be used to play the game
+// var rockButton = document.getElementById('rock');
+ //var paperButton = document.getElementById('paper');
+ // var scissorsButton = document.getElementById('scissors');
+    // add an event listener to the rock button that will run the function playRound when clicked
+    
+document.getElementById('stein').onclick = function (e) {
+    playerSelection = 'rock';
+}
+
+document.getElementById('schere').onclick = function (e) {
+    playerSelection = 'scissors';
+}
+document.getElementById('papier').onclick = function (e) {
+    playerSelection = 'paper';
+}
+        
+        
+
+
 // get computer selection from the computer via getComputerChoice and store it in a variable
 var computerSelection = getComputerChoice();
 // call playRound function and store the result in a variable
@@ -74,9 +94,7 @@ for (var i = 0; i < 5; i++) {
         
     }
 }
-console.log('You won ' + playerWins + ' times.');
-console.log('You lost ' + computerWins + ' times.');
-console.log('You tied ' + ties + ' times.');
+alert('You tied ' + ties + ' times.');
 // if playerWins is greater than computerWins, alert the user that they won the game
 if (playerWins > computerWins) {
     alert('You won the game!');
